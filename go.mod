@@ -7,6 +7,7 @@ require (
 	github.com/coocood/freecache v1.1.1
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/natefinch/lumberjack v2.0.0+incompatible
+	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/sirupsen/logrus v1.8.1
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
