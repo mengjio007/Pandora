@@ -10,10 +10,16 @@
 > 零GC,最多256指针
 
 - convert
-> TODO
+> 数据/时间转换
 
 - jwt
 > HMAC-jwt
+
+- log
+> logrus封装;自动日志切割（200M,30d）
+
+- pinocchio
+> expire_map/uuid
 
 - func
 > bubble-sort;
