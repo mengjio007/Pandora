@@ -12,7 +12,7 @@ const jwtKey = "0x9527"
  *    HS256 --- HMAC SHA256
  */
 // CreateTokenHMAC
-func CreateTokenHMAC(m map[string]string, keys ...string) string {
+func CreateTokenHMAC(m map[string]interface{}, keys ...string) string {
 	key := jwtKey
 	if len(keys) > 0 {
 		key = keys[0]
@@ -32,7 +32,7 @@ func CreateTokenHMAC(m map[string]string, keys ...string) string {
  *
  */
 // ParseToKenHMAC
-func ParseTokenHMAC(tokenString string, keys ...string) (map[string]string, bool) {
+func ParseTokenHMAC(tokenString string, keys ...string) (map[string]interface{}, bool) {
 	key := jwtKey
 	if len(keys) > 0 {
 		key = keys[0]
@@ -44,7 +44,7 @@ func ParseTokenHMAC(tokenString string, keys ...string) (map[string]string, bool
 		return []byte(key), nil
 	})
 	if claims, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
-		mapData := make(map[string]string)
+		mapData := make(map[string]interface{})
 		for index, val := range claims {
 			mapData[index] = fmt.Sprintf("%v", val)
 		}
